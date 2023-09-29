@@ -59,7 +59,7 @@ export const App = () => {
         </h2>
 
         <textarea
-          className="mt-10 bg-[#312D4B] w-[600px] p-4 outline-none rounded-md shadow-lg"
+          className="mt-10 bg-[#312D4B] sm:py-10 sm:px-10 md:w-[600px] outline-none rounded-md shadow-lg"
           cols={30}
           rows={10}
           value={text}
