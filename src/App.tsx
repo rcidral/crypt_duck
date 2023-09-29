@@ -2,31 +2,51 @@ import { useState } from "react";
 
 export const App = () => {
   const [text, setText] = useState("");
-  const [encryptedText, setEncryptedText] = useState("");
-  const [isEncrypted, setIsEncrypted] = useState(false);
 
   const handleCrypt = () => {
-    const textToEncrypt = isEncrypted ? encryptedText : text;
-    const encrypted = textToEncrypt
-      .split("")
-      .map((char) => (char === " " ? " " : "quack"))
-      .join("");
-    setEncryptedText(encrypted);
-    setIsEncrypted(true);
+    const alphabet: string = "abcdefghijklmnopqrstuvwxyz";
+
+    setText(
+      text
+        .split(" ")
+        .map((word) => {
+          return word
+            .split("")
+            .map((letter) => {
+              const lowercaseLetter = letter.toLowerCase();
+              if (alphabet.includes(lowercaseLetter)) {
+                const position = alphabet.indexOf(lowercaseLetter) + 1;
+                return "quack".repeat(position);
+              } else {
+                return letter;
+              }
+            })
+            .join("-");
+        })
+        .join("~")
+    );
   };
 
   const handleDecrypt = () => {
-    const decrypted = encryptedText
-      .split("quack")
-      .map((segment) => {
-        if (segment === " ") {
-          return " ";
-        }
-        return "a".repeat(segment.length);
-      })
-      .join("");
-    setEncryptedText(decrypted);
-    setIsEncrypted(false);
+    setText(
+      text
+        .split("~")
+        .map((word) => {
+          return word
+            .split("-")
+            .map((segment) => {
+              if (segment.includes("quack")) {
+                const quacksCount = segment.split("quack").length - 1;
+                const alphabetIndex = quacksCount - 1;
+                return String.fromCharCode(97 + alphabetIndex);
+              } else {
+                return segment;
+              }
+            })
+            .join("");
+        })
+        .join(" ")
+    );
   };
 
   return (
@@ -42,7 +62,7 @@ export const App = () => {
           className="mt-10 bg-[#312D4B] w-[600px] p-4 outline-none rounded-md shadow-lg"
           cols={30}
           rows={10}
-          value={isEncrypted ? encryptedText : text}
+          value={text}
           onChange={(e) => setText(e.target.value)}
         ></textarea>
 
