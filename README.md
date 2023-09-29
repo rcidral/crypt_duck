@@ -16,6 +16,9 @@ pnpm install
 pnpm dev
 ```
 
+## Project on Vercel
+- https://crypt-duck.vercel.app/
+
 **Developed By:**
 
 - [João Vitor Mendes](https://github.com/joaovmendes19)
