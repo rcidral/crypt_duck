@@ -20,7 +20,4 @@ pnpm dev
 - https://crypt-duck.vercel.app/
 
 **Developed By:**
-
-- [João Vitor Mendes](https://github.com/joaovmendes19)
-- [Rafael Farias](https://github.com/Fifael)
 - [Ricardo Cidral Machado](https://github.com/rcidral)
