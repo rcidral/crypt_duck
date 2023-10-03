@@ -3,6 +3,15 @@
 The purpose of this project is to create a web application to transform text into a cryptic text.
 The Hash is always the sound of a duck.
 
+## Technologies
+
+- [React.Js](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [ESLint](https://eslint.org/)
+- [PNPM](https://pnpm.js.org/)
+- [Vercel](https://vercel.com/)
+
 ## Commands
 
 ```bash
