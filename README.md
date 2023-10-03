@@ -1,9 +1,9 @@
-# Crypt Duck
+# 📚 Crypt Duck
 
 The purpose of this project is to create a web application to transform text into a cryptic text.
 The Hash is always the sound of a duck.
 
-## Technologies
+## 🚀 Technologies
 
 - [React.Js](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -12,7 +12,7 @@ The Hash is always the sound of a duck.
 - [PNPM](https://pnpm.js.org/)
 - [Vercel](https://vercel.com/)
 
-## Commands
+## 📁 Commands
 
 ```bash
 # Clone the repository
